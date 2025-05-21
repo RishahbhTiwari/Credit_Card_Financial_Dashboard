@@ -7,9 +7,9 @@ To develop a real-time, interactive Credit Card Financial Dashboard that deliver
 🧰 Tools & Technologies Used:
 Tool/Tech	                        Purpose
 Power BI	                        Interactive dashboards and data modeling
-PostgreSQL	                      Real-time backend database
-SQL	                              Data extraction and transformation
-DAX (Data Analysis Expressions)	  Business logic, KPIs, and custom metrics
+PostgreSQL	                        Real-time backend database
+SQL	                                Data extraction and transformation
+DAX (Data Analysis Expressions)	    Business logic, KPIs, and custom metrics
 Excel	                            Initial data staging and structure
 ----------------------------------------------------------------------------------------------------------------------------------
 
