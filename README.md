@@ -1,28 +1,37 @@
-💳 Credit Card Financial Dashboard (Power BI + SQL + DAX)-
+# 💳 Credit Card Financial Dashboard (Power BI + SQL + DAX)
 
-📌 Project Objective:
+## 📌 Project Objective
+
 To develop a real-time, interactive Credit Card Financial Dashboard that delivers weekly insights into key performance metrics like revenue, transactions, customer trends, and card usage. This solution enables stakeholders to monitor performance, track growth, and make data-driven decisions.
-----------------------------------------------------------------------------------------------------------------------------------
 
-🧰 Tools & Technologies Used:
-Tool/Tech	                        Purpose
-Power BI	                        Interactive dashboards and data modeling
-PostgreSQL	                        Real-time backend database
-SQL	                                Data extraction and transformation
-DAX (Data Analysis Expressions)	    Business logic, KPIs, and custom metrics
-Excel	                            Initial data staging and structure
-----------------------------------------------------------------------------------------------------------------------------------
+---
 
-🗂️ Project Components:
-Data Sources: Customer info, transaction history, card type, location
-SQL Integration: Data imported into PostgreSQL using CSVs and queried in Power BI
-Data Modeling: Relationships created across fact and dimension tables
-Calculated Columns/Measures: Using DAX for revenue, customer segments, trends
-Weekly Insights: Week-over-week performance tracking
-Dashboards: Built with slicers, charts, KPIs for executive-level summaries
-----------------------------------------------------------------------------------------------------------------------------------
+## 🧰 Tools & Technologies Used
 
-🔢 DAX Measures & Custom Logic:
+| Tool/Tech        | Purpose                                     |
+|------------------|---------------------------------------------|
+| **Power BI**     | Interactive dashboards and data modeling    |
+| **PostgreSQL**   | Real-time backend database                  |
+| **SQL**          | Data extraction and transformation          |
+| **DAX**          | Business logic, KPIs, and custom metrics    |
+| **Excel**        | Initial data staging and structure          |
+
+---
+
+## 🗂️ Project Components
+
+- **Data Sources**: Customer info, transaction history, card type, location  
+- **SQL Integration**: Data imported into PostgreSQL using CSVs and queried in Power BI  
+- **Data Modeling**: Relationships created across fact and dimension tables  
+- **Calculated Columns/Measures**: Using DAX for revenue, customer segments, trends  
+- **Weekly Insights**: Week-over-week performance tracking  
+- **Dashboards**: Built with slicers, charts, KPIs for executive-level summaries  
+
+---
+
+## 🔢 DAX Measures & Custom Logic
+
+```DAX
 -- Categorize age groups
 AgeGroup = SWITCH(
     TRUE(),
@@ -55,6 +64,7 @@ Previous_week_Revenue = CALCULATE(
     SUM('cc_detail'[Revenue]),
     FILTER(ALL('cc_detail'), 'cc_detail'[week_num2] = MAX('cc_detail'[week_num2]) - 1)
 )
+
 ----------------------------------------------------------------------------------------------------------------------------------
 
 📊 Key Insights from Dashboard (Week 53):
